@@ -1,8 +1,59 @@
 html,
 body {
   font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: black;
 }
 
-em {
+a {
+  text-decoration: none;
+  color: black;
+}
+
+strong {
   font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.master-container {
+  max-width: 94rem;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+nav li {
+  display: inline;
+}
+
+nav li:first-child {
+  flex-grow: 1;
+  margin-left: 1.5rem;
+}
+
+nav li:first-child a {
+  display: flex;
+  align-items: center;
+}
+
+nav li:first-child img {
+  height: 2rem;
+}
+
+nav li:nth-child(1n+2) {
+  margin-left: 1rem;
+}
+
+nav li:last-child {
+  margin-right: 1.5rem;
 }
