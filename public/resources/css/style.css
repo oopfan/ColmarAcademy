@@ -2,7 +2,7 @@ html,
 body {
   font-family: Helvetica, sans-serif;
   font-size: 16px;
-  background-color: black;
+  background-color: white;
 }
 
 a {
@@ -14,46 +14,42 @@ strong {
   font-weight: bold;
 }
 
-nav ul {
+header {
+  position: fixed;
+  width: 100%;
+  border-bottom: solid 1px #c6c1c1;
+  background-color: white;
+  z-index: 1;
+}
+
+header .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 4rem;
 }
 
-.master-container {
-  max-width: 94rem;
-  margin: 0 auto;
-  background-color: white;
-}
-
-.container {
-  width: 960px;
-  margin: 0 auto;
-}
-
-nav li {
-  display: inline;
-}
-
-nav li:first-child {
-  flex-grow: 1;
+header .logo {
   margin-left: 1.5rem;
-}
-
-nav li:first-child a {
   display: flex;
   align-items: center;
 }
 
-nav li:first-child img {
+header .icon {
   height: 2rem;
 }
 
-nav li:nth-child(1n+2) {
+header nav ul {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+header nav li {
   margin-left: 1rem;
 }
 
-nav li:last-child {
-  margin-right: 1.5rem;
+.main-content {
+  position: relative;
+  top: 4rem; /* To offset for fixed header. */
 }
