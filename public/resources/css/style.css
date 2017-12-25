@@ -144,6 +144,61 @@ header nav li {
   padding-left: 16px;
 }
 
+#learning-section {
+  padding: 32px 72px;
+  background-color: lightgray;
+}
+
+#learning-section .top-row {
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#learning-section .horizontal-layout {
+  margin-bottom: 32px;
+}
+
+#learning-section .vertical-layout {
+  flex: 1;
+  background-color: white;
+}
+
+#learning-section .vertical-layout:nth-child(n+2) {
+  margin-left: 32px;
+}
+
+#learning-section .image-container {
+  width: 100%;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+#learning-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#learning-section .content {
+  padding: 16px 16px 24px 16px;
+  flex: 1;
+}
+
+#learning-section .content h1 {
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+#learning-section .content h2 {
+  padding-top: 8px;
+}
+
+#learning-section .content p {
+  padding-top: 8px;
+}
+
 .button {
   width: 80%;
   text-align: center;
