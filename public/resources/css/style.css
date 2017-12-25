@@ -90,6 +90,60 @@ header nav li {
   line-height: 1.4;
 }
 
+.horizontal-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+#information-section {
+  width: 100%;
+}
+
+#information-section .left-column {
+  width: 60%;
+  padding: 32px 24px;
+}
+
+#information-section .right-column {
+  width: 40%;
+  padding-top: 16px;
+}
+
+#information-section .content {
+  overflow: hidden;
+}
+
+#information-section .left-column .image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+#information-section .right-column .image-container {
+  width: 35%;
+  min-width: 35%;
+  overflow: hidden;
+}
+
+#information-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#information-section .right-column .horizontal-layout {
+  padding: 16px;
+  align-items: center;
+}
+
+#information-section .right-column .horizontal-layout .content {
+  padding-left: 16px;
+}
+
 .button {
   width: 80%;
   text-align: center;
