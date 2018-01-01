@@ -6,6 +6,15 @@ body {
   line-height: 1.2;
 }
 
+h1,
+h2,
+h3,
+p,
+q,
+a {
+  opacity: 0.9;
+}
+
 h1 {
   font-size: 2.25rem;
 }
@@ -92,31 +101,33 @@ header {
   z-index: 1;
 }
 
-header .content {
+nav ul {
   display: flex;
   align-items: center;
+}
+
+nav > ul {
   justify-content: space-between;
   height: 4rem;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
-header .logo {
-  margin-left: 1.5rem;
+nav > ul > ul li {
+  margin-left: 16px;
+}
+
+nav .logo {
   display: flex;
   align-items: center;
 }
 
-header .icon {
+nav .icon {
   height: 2rem;
 }
 
-header nav ul {
-  display: flex;
-  align-items: center;
-  margin-right: 1.5rem;
-}
-
-header nav li {
-  margin-left: 1rem;
+nav.mobile {
+  display: none;
 }
 
 .indent {
@@ -158,10 +169,6 @@ header nav li {
 
 .thin-frame {
   padding: 16px;
-}
-
-.border-frame {
-  padding: 32px 0;
 }
 
 .dark-background {
@@ -247,13 +254,25 @@ header nav li {
   padding: 16px 0 24px 16px;
 }
 
-@media only screen and (max-width: 1024px) {
+footer {
+  padding-top: 16px;
+  padding-bottom: 48px;
+  border-top: 1px solid lightgray;
+  font-size: 0.8rem;
 }
 
-@media only screen and (max-width: 700px) {
+footer p:first-child {
+  flex: 1;
+  padding-left: 24px;
 }
 
-@media only screen and (max-width: 470px) {
+footer p:nth-child(n+2) {
+  padding-right: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Mobile (normally breaks at 470px)*/
+
   #banner-section {
     flex-direction: column;
   }
@@ -263,8 +282,11 @@ header nav li {
   #banner-section .vertical-layout:first-child {
     padding: 0;
   }
-  #banner-section .vertical-layout:last-child {
+  #banner-section .vertical-layout:last-child .content {
     padding: 32px 16px;
+  }
+  #banner-section .button {
+    width: 100%;
   }
 
   #information-section > .vertical-layout:first-child {
@@ -298,7 +320,36 @@ header nav li {
   #learning-section-desktop {
     display: none;
   }
+  #learning-section-desktop > .vertical-layout {
+    padding: 0;
+  }
   #learning-section-mobile {
     display: block;
+  }
+
+  #thesis-section > .horizontal-layout > .vertical-layout:nth-child(2) {
+    display: none;
+  }
+  #thesis-section > .horizontal-layout > .vertical-layout:nth-child(1) {
+    width: 100%;
+    padding: 16px 0 24px 0;
+  }
+  #thesis-section > .horizontal-layout > .vertical-layout:nth-child(1) > .content {
+    display: none;
+  }
+
+  nav.desktop {
+    display: none;
+  }
+  nav.mobile {
+    display: block;
+  }
+
+  footer {
+    border-top: 0;
+    padding-bottom: 16px;
+  }
+  footer p:nth-child(n+2) {
+    display: none;
   }
 }

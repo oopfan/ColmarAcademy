@@ -10,21 +10,36 @@
 </head>
 <body>
   <header>
-    <div class="content">
-      <a href="#" class="logo">
-        <img class="icon" src="resources/images/ic-logo.svg" alt="logo">
-        <span><strong>COLMAR</strong>ACADEMY</span>
-      </a>
-      <nav>
+    <nav class="desktop" role="navigation">
+      <ul>
+        <li>
+          <a href="#" class="logo">
+            <img class="icon" src="resources/images/ic-logo.svg" alt="logo">
+            <span><strong>COLMAR</strong>ACADEMY</span>
+          </a>
+        </li>
         <ul>
           <li><a href="#">On campus</a></li>
           <li><a href="#">Online</a></li>
           <li><a href="#">For companies</a></li>
           <li><a href="#">Sign in</a></li>
         </ul>
-      </nav>
-    </div>
+      </ul>
+    </nav>
+    <nav class="mobile" role="navigation">
+      <ul>
+        <li>
+          <a href="#" class="logo">
+            <img class="icon" src="resources/images/ic-logo.svg" alt="logo">
+          </a>
+        </li>
+        <li><a href="#"><img src="resources/images/ic-on-campus.svg" alt="On campus"></a></li>
+        <li><a href="#"><img src="resources/images/ic-online.svg" alt="Online"></a></li>
+        <li><a href="#"><img src="resources/images/ic-login.svg" alt="Login"></a></li>
+      </ul>
+    </nav>
   </header>
+
   <div class="main-content">
 
     <div id="banner-section" class="horizontal-layout dark-background">
@@ -115,6 +130,7 @@
         <h3 class="dark-background">Marketing</h3>
       </div>
     </div>
+
     <div id="learning-section-desktop" class="dark-background">
       <h2 class="section-title">Start Learning</h2>
       <div class="vertical-layout">
@@ -190,7 +206,7 @@
       <div class="horizontal-layout">
         <div class="vertical-layout wide-frame width-60">
           <div class="image-container">
-            <video width="100%">
+            <video width="100%" autoplay loop>
               <source src="./resources/videos/thesis.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -230,6 +246,12 @@
         </div>
       </div>
     </div>
+
+    <footer class="horizontal-layout">
+      <p>&copy; 2016 Colmar Academy. All rights reserved.</p>
+      <p>Terms</p>
+      <p>Privacy</p>
+    </footer>
 
   </div>
 </body>
